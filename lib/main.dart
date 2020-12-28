@@ -10,9 +10,15 @@ import 'package:flutter/material.dart';
 import 'package:battery/battery.dart';
 import 'package:flutter_plus_plugins/battery.dart';
 import 'package:flutter_plus_plugins/connectivity.dart';
+import 'package:flutter_plus_plugins/device_info.dart';
 
 void main() {
-  runApp(MyApp());
+ runZonedGuarded(() {
+    runApp(MyApp());
+  }, (dynamic error, dynamic stack) {
+    print(error);
+    print(stack);
+  });
 }
 
 class MyApp extends StatelessWidget {
@@ -24,7 +30,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       // home: BatteryPage(title: 'Flutter Demo Home Page'),
-      home: ConnectivityPage(title: 'Flutter Demo Home Page'),
+      // home: ConnectivityPage(title: 'Flutter Demo Home Page'),
+      home: DeviceInfo(),
     );
   }
 }
