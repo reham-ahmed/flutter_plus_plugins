@@ -12,7 +12,7 @@ import 'package:flutter_plus_plugins/battery.dart';
 import 'package:flutter_plus_plugins/connectivity.dart';
 import 'package:flutter_plus_plugins/device_info.dart';
 import 'package:flutter_plus_plugins/package_info.dart';
-
+import 'package:flutter_plus_plugins/share.dart';
 
 void main() {
  runZonedGuarded(() {
@@ -25,7 +25,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) { 
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -33,9 +33,9 @@ class MyApp extends StatelessWidget {
       ),
       // home: BatteryPage(title: 'Flutter Demo Home Page'),
       // home: ConnectivityPage(title: 'Flutter Demo Home Page'),
-      home: Packageinfo(title: 'Flutter Demo Home Page'),
+      // home: Packageinfo(title: 'Flutter Demo Home Page'),
       // home: DeviceInfo(),
-
+      home:SharePage()
     );
   }
 }
