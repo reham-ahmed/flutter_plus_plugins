@@ -11,6 +11,8 @@ import 'package:battery/battery.dart';
 import 'package:flutter_plus_plugins/battery.dart';
 import 'package:flutter_plus_plugins/connectivity.dart';
 import 'package:flutter_plus_plugins/device_info.dart';
+import 'package:flutter_plus_plugins/package_info.dart';
+
 
 void main() {
  runZonedGuarded(() {
@@ -31,7 +33,9 @@ class MyApp extends StatelessWidget {
       ),
       // home: BatteryPage(title: 'Flutter Demo Home Page'),
       // home: ConnectivityPage(title: 'Flutter Demo Home Page'),
-      home: DeviceInfo(),
+      home: Packageinfo(title: 'Flutter Demo Home Page'),
+      // home: DeviceInfo(),
+
     );
   }
 }
